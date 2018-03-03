@@ -32,8 +32,6 @@ try:
     cache_contents = cache_file.read()
     CACHE_DICTION = json.loads(cache_contents)
     cache_file.close()
-
-# if there was no file, no worries. There will be soon!
 except:
     CACHE_DICTION = {}
 
