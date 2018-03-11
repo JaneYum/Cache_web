@@ -59,3 +59,9 @@ def make_request_using_cache(url):
         fw.write(dumped_json_cache)
         fw.close() # Close the open file
         return CACHE_DICTION[unique_ident]
+        
+# "find_all" become a list but "find" will become a string
+        author = soup.find_all('a', attrs={"rel" : "author"})
+        for i in range(len(author)):
+            author = author[i].string
+        This could solve the problem of nonetype
